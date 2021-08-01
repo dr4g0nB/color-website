@@ -9,6 +9,9 @@
   --mostaza: #fcb045;
   --red: #fd1d1d;
   --light-purple: #9518fc;
+  --black: #000;
+  --light-black: #161616;
+  --bright-purple: #da22ff;
 
   /*Font*/
   --font-size-2: 2rem;
@@ -118,9 +121,74 @@
 }
 
 /*Hero Section*/
+.hero {
+  background: var(--black);
+  background: linear-gradient(to right, var(--light-black), var(--black));
+  padding: 200px 0;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 90%;
+  text-align: center;
+  padding: 30px;
+}
+
+.hero__heading {
+  font-size: 100px;
+  margin-bottom: 24px;
+  color: var(--white);
+}
+
+.hero__heading span {
+  background: var(--purple);
+  background: -webkit-linear-gradient(to right, var(--mostaza), var(--red), var(--purple));
+  background: linear-gradient(to right, var(--mostaza), var(--red), var(--purple));
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-tex-fill-color: transparent;
+}
+
+.hero__description {
+  font-size: 60px;
+  background: var(var(--bright-purple));
+  background: -webkit-linear-gradient(to right, #9114ff, var(--bright-purple));
+  background: linear-gradient(to right, #8f0eff, var(--bright-purple));
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-tex-fill-color: transparent;
+}
+
+.hightlight {
+  border-bottom: 4px solid rgba(132, 0 255);
+}
+
+/*About section*/
+
+
 
 /*Media queries*/
-/**/
+
+/*768px*/
+@media screen and (max-width: 768px) {
+  .hero__heading {
+    font-size: 60px;
+  }
+
+  .hero__description {
+    font-size: 40px;
+  }
+}
+
+/*960px*/
 @media screen and (max-width: 960px) {
   .navbar__container {
     display: flex;
